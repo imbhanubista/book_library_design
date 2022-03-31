@@ -1,0 +1,14 @@
+.card{
+    width: 30%;
+    margin: auto;
+    margin-top: 50px;
+    border-radius: 20px;
+    box-shadow:rgba(0, 0, 0, 0.16) 0px 10px 36px 0px, rgba(0, 0, 0, 0.06) 0px 0px 0px 1px;;
+}
+.card Input{
+    margin-bottom: 5px !important;
+}
+hr{
+border-top: 1px dashed rgb(156, 144, 144);
+margin-bottom: 10px !important;
+}
