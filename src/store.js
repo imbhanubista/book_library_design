@@ -13,7 +13,7 @@ const persistedReducer = persistReducer(persistConfig, rootReducer)
 
 const store = createStore(
     persistedReducer,
-    window.__REDUX_DEVTOOLS_EXTENSION__ && window.__REDUX_DEVTOOLS_EXTENSION__()
+    // window.__REDUX_DEVTOOLS_EXTENSION__ && window.__REDUX_DEVTOOLS_EXTENSION__()
 )
 
 const persistor = persistStore(store)
