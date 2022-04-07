@@ -114,7 +114,7 @@ const LogIn = () => {
               <InputGroup mb="3">
                 <Input
                   textAlign={"center"}
-                  type="password"
+                  type={show?"text":"password"}
                   placeholder="Enter Your password"
                   variant="filled"
                   size={"lg"}
