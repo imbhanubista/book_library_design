@@ -1,10 +1,10 @@
-import { Box, Button, Center, Divider, GridItem, Heading, Image, Popover, PopoverArrow, PopoverBody, PopoverCloseButton, PopoverContent, PopoverHeader, PopoverTrigger, SimpleGrid, Text } from '@chakra-ui/react'
+import { Box,Input, Button, Center, Divider, GridItem, Heading, Image, Popover, PopoverArrow, PopoverBody, PopoverCloseButton, PopoverContent, PopoverHeader, PopoverTrigger, SimpleGrid, Text } from '@chakra-ui/react'
 import axios from 'axios'
 import React, { useEffect, useState } from 'react'
 import { useSelector } from 'react-redux'
 import SideNav from '../usedProps/Sidebar'
-import { ArrowDownIcon} from '@chakra-ui/icons'
-
+import { ArrowDownIcon,Search2Icon} from '@chakra-ui/icons'
+ 
 const ListBook = () => {
 
     // to get jwt token
@@ -12,8 +12,12 @@ const ListBook = () => {
     const token = selector.data.data.token
     // to store data 
     const [store, setStore] = useState([])
+    // for the filteration process
+    const [copyStore, setCopyStore] = useState([])
+
     // for loading 
     const [loading, setLoading] = useState(true)
+
     // to get api data
     let bookList = async()=>{
       // setLoading(true)
@@ -22,14 +26,16 @@ const ListBook = () => {
             url :"http://localhost:5000/all_books",
             data:{token}
         })
-        console.log(allData.data)
+        // console.log(allData.data)
 setStore(allData.data.data.allBooks)
 setLoading(false)
+setCopyStore(allData.data.data.allBooks)
     }
 
     useEffect(()=>{
             bookList()
     },[])
+    
 
     // function to call purchased book api
     const handlePurchased =async(id)=>{
@@ -39,10 +45,48 @@ setLoading(false)
         data:{token}
       })
     }
+
+    // to store input data
+    const [inputD, setInputD] = useState("")
+    // to handle the input field of search
+    const handleInput =(e)=>{
+      let input = (e.target.value)
+      setInputD(input)
+    }
+
+    // for search button
+    const handleSearch =()=>{
+      console.log("fffff");
+      console.log(copyStore);
+      let searchData = copyStore.filter((hello)=>{
+        console.log(hello, "Hello i am here");
+        return hello.bname === inputD
+      })
+    // console.log(searchData)
+      setStore(searchData)
+    }
+    
   return (
     <SideNav>
     {loading? "Data is loading":
     <>
+   <SimpleGrid columns="2" spacing="80" mb="8">
+     
+       <Box> <Text fontSize="45" fontWeight="bold" ml="4"><b>List of all Book</b>s</Text> </Box>
+       <Box> 
+       <Button float="right" onClick={handleSearch} > <Search2Icon/> </Button>
+       <Input type="text" width="40" 
+       placeholder="Search ... "
+       variant="outer" 
+       float="right"
+       onChange = {handleInput}
+       mr="2"
+       />
+        </Box>
+    
+   </SimpleGrid>
+     
+   
             <SimpleGrid columns={4} spacing="8" h={"inherit"}>
 
     {store.map((data,index)=>{
