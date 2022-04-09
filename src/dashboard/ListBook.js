@@ -10,6 +10,7 @@ const ListBook = () => {
     // to get jwt token
     const selector = useSelector(state=>state.reducer)
     const token = selector.data.data.token
+    const isAdmin = selector.data.data.isAdmin
     // to store data 
     const [store, setStore] = useState([])
     // for the filteration process
@@ -56,14 +57,23 @@ setCopyStore(allData.data.data.allBooks)
 
     // for search button
     const handleSearch =()=>{
-      console.log("fffff");
+      // console.log("fffff");
       console.log(copyStore);
       let searchData = copyStore.filter((hello)=>{
-        console.log(hello, "Hello i am here");
-        return hello.bname === inputD
+        // console.log(hello, "Hello i am here");
+        return hello.bname.toLowerCase() === inputD.toLowerCase()
       })
     // console.log(searchData)
       setStore(searchData)
+    }
+    // start of delete function
+    const handleDelete = async(id)=>{
+      let deleteApi = await axios({
+        method:"post",
+        url:"http://localhost:5000/delete_book/" + id,
+        data:{token}
+      })
+      // console.log(deleteApi , "Hello dear")
     }
     
   return (
@@ -121,6 +131,19 @@ setCopyStore(allData.data.data.allBooks)
                 </Popover>
               </Center>
               <Center><Button variant={"link"} mb="4" onClick={()=>handlePurchased(data._id)}>Purchase</Button></Center>
+
+
+{/* start Delete FUnction */}
+             {isAdmin?
+             <Box>
+             <Center mb="4">
+               <Button onClick={()=>handleDelete(data._id)}>Delete</Button>
+             </Center>
+           </Box> : "" 
+            }
+            
+
+            {/* ENd delete function */}
             </Box>
           </Center>
           </Box>
