@@ -1,70 +1,57 @@
-# Getting Started with Create React App
+# Simple Book Library Frontend
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+# Technology Used
+. React
+. Routing with React-routing-dom
+. Redux with Redux Persist
+. Api calling with axios
+. API implementation
+. Chakra UI and components
 
-## Available Scripts
 
-In the project directory, you can run:
+# Lesson Learned
 
-### `yarn start`
+. To implement Chakra UI component
+. Implementation of Redux in real-world project
+. Private Routing
+. Authenticated and UnAuthenticated API calling and more on API calling
+. CRUD operation
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+# Screenshots
 
-### `yarn test`
+# Login Section
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+![login](https://user-images.githubusercontent.com/76931757/162585016-7874971b-0936-4f96-9d71-bca9c2dfe547.png)
 
-### `yarn build`
+# SignUp
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+![signup](https://user-images.githubusercontent.com/76931757/162585038-b038ee26-8972-45b6-88a7-648f9ed1b454.png)
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+# Forget Password
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+![forgot](https://user-images.githubusercontent.com/76931757/162585051-bb480595-0def-4c98-9f89-2c5f2367c818.png)
 
-### `yarn eject`
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+# Reset Password
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+![change pass](https://user-images.githubusercontent.com/76931757/162585061-0f3f15b7-a202-440d-8cc5-3a025001b98c.png)
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+# Home
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+![home](https://user-images.githubusercontent.com/76931757/162585097-6108a995-114d-4252-9f3a-efb761d68475.png)
 
-## Learn More
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+# Create Book
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+![create](https://user-images.githubusercontent.com/76931757/162585100-6f5bbc12-2bbd-4184-b946-f9d8c86cd8fb.png)
 
-### Code Splitting
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+# Find all books
 
-### Analyzing the Bundle Size
+![findbook](https://user-images.githubusercontent.com/76931757/162585109-65d69881-26e6-4a3e-9267-b5043de73a18.png)
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
 
-### Making a Progressive Web App
+# Purchased list of books
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `yarn build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+![purchased](https://user-images.githubusercontent.com/76931757/162585116-4c26df21-562c-40b5-971b-99543a2dac9a.png)
