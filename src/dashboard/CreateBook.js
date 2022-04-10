@@ -16,6 +16,7 @@ import { useForm } from "react-hook-form";
 import { useSelector } from "react-redux";
 import { useNavigate } from "react-router-dom";
 import { toast } from "react-toastify";
+import SideNav from '../usedProps/Sidebar'
 import Book from '../images/book.jpg' 
 import cover from '../images/cover.jpg' 
 
@@ -86,25 +87,23 @@ reset()
   }
   return (
     <div>
-      <Box>
-        <SimpleGrid columns={2} spacing={1} mt="10">
+     <SideNav>
+     <Box>
+        <SimpleGrid columns={2} spacing={1} mt="5" >
           {/* for book library text */}
           <GridItem>
-            <Center p={60} backgroundImage={cover}  ml={10} bgSize="cover" height={"200"} shadow="dark-lg">
-              <Box >
-                <Heading  color="black" size={"4xl"}>Add Your Book Here</Heading> 
-                
+            <Center p={60} backgroundImage={cover}  bgSize="cover" height={"300"} shadow="dark-lg">
+              <Box  width={40}>
+                <Heading  color="black" size={"3xl"}>Add Your Book Here</Heading> 
               </Box>
-              
             </Center>
-            
           </GridItem>
           {/* for book adding form   */}
           <GridItem >
-            <Center  padding={60} backgroundImage={Book} opacity="0.9" mr={"5"} height="200" shadow={"2xl"}>
-              <Box >
+            <Center  padding={60} backgroundImage={Book} opacity="0.9" width="-moz-max-content" height="300" shadow={"2xl"}>
+              <Box>
                   <Center  >
-                    <Heading color={"black"} mb="6"color ="#00758E">Add New Book</Heading>
+                    <Text color={"black"} mb="4"color ="#00758E" mt={8} fontWeight="bold" fontSize={25} >Add New Book</Text>
                   </Center>
                   <Divider />
                 {/* start of form design */}
@@ -173,7 +172,7 @@ reset()
                   <Center><Button onClick={fileBtn} mb="3">Upload</Button></Center>
                   <Center>
                     {
-                      coverPics === ""? "Must Provice Cover Picture":
+                      coverPics === ""? "":
                       <Image borderRadius={"full"} boxSize="150px" src={URL.createObjectURL(coverPics)} alt="Image Preview"/>
                     }
                     
@@ -203,6 +202,10 @@ reset()
         <Center><Button variant ="link" mt="10" onClick={navHome}>HOME PAGE</Button></Center>
 
       </Box>
+      <Center mt="20">
+        <footer >© 2022 Bistaify. All rights reserved.</footer>
+      </Center>
+     </SideNav>
     </div>
   );
 };

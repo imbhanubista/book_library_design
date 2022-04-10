@@ -19,6 +19,7 @@ import { useForm } from "react-hook-form";
 import axios from "axios";
 import {  toast } from 'react-toastify';
 import { useNavigate } from "react-router-dom";
+import Nav from '../usedProps/Nav'
 
 const SignUp = () => {
   // for password show hide
@@ -86,7 +87,9 @@ const SignUp = () => {
   };
 
   return (
-    <Center mt={10}>
+   <div>
+     <Nav/>
+      <Center mt={2}>
       <Box border={"2px"} borderColor={"#00758E"} borderRadius={"20px"} p= {{base : 8, md : 8}} width = {{base : 500, md : 500}}>
         <Heading color={"#007373"} textAlign="center">
           Sign Up
@@ -247,6 +250,7 @@ const SignUp = () => {
         </Center>
       </Box>
     </Center>
+   </div>
   );
 };
 

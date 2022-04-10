@@ -6,12 +6,14 @@ import 'react-toastify/dist/ReactToastify.css';
 import theme from './styling/theme';
 import "@fontsource/raleway"
 import "@fontsource/playfair-display"
+import Nav from './usedProps/Nav'
 
 function App() {
   return (
    <ChakraProvider theme={theme}>
      <ToastContainer/>
      <Routing/>
+     {/* <Nav/> */}
    </ChakraProvider>
   );
 }

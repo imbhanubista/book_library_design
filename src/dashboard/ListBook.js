@@ -153,7 +153,9 @@ setCopyStore(allData.data.data.allBooks)
 
     </>
     }
-    
+      <Center mt="20">
+        <footer >© 2022 Bistaify. All rights reserved.</footer>
+      </Center>
     </SideNav>
   )
 }

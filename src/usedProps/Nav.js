@@ -22,6 +22,9 @@ import {
     ChevronRightIcon,
   } from '@chakra-ui/icons';
   
+import {Link as RouterLink} from "react-router-dom"
+
+
   export default function WithSubnavigation() {
     const { isOpen, onToggle } = useDisclosure();
   
@@ -78,7 +81,7 @@ import {
               fontWeight={400}
               variant={'link'}
               href={'#'}>
-              Sign In
+             <RouterLink to ="/login"> Sign In</RouterLink>
             </Button>
             <Button
               display={{ base: 'none', md: 'inline-flex' }}
@@ -90,7 +93,7 @@ import {
               _hover={{
                 bg: 'pink.300',
               }}>
-              Sign Up
+             <RouterLink to='/signup'> Sign Up</RouterLink>
             </Button>
           </Stack>
         </Flex>
@@ -279,16 +282,16 @@ import {
     //   ],
     // },
 
-    {
-        label: 'Find Books',
-        href: '#',
-      },
-    {
-      label: 'Create Books',
-      href: '#',
-    },
-    {
-      label: 'About Us',
-      href: '#',
-    },
+    // {
+    //     label: 'Find Books',
+    //     href: '#',
+    //   },
+    // {
+    //   label: 'Create Books',
+    //   href: '#',
+    // },
+    // {
+    //   label: 'About Us',
+    //   href: '#',
+    // },
   ];

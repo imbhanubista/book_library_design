@@ -13,6 +13,7 @@ import { ArrowForwardIcon } from "@chakra-ui/icons";
 import axios from "axios";
 import { toast } from "react-toastify";
 import { useNavigate } from "react-router-dom";
+import Nav from '../usedProps/Nav'
 const ForgotPass = () => {
   // navigation to reset password
   const resetNav = useNavigate();
@@ -52,8 +53,10 @@ const ForgotPass = () => {
     }
   };
   return (
-    <div>
-      <Center mt={"20"}>
+    
+     <div>
+       <Nav/>
+     <Center mt={"20"}>
         <Box boxShadow={"md"} p={"8"} color="#007373">
           <Heading mb={"8"}>Forgot Password?</Heading>
           <Divider />
@@ -91,7 +94,8 @@ const ForgotPass = () => {
           </Text>
         </Box>
       </Center>
-    </div>
+     </div>
+    
   );
 };
 

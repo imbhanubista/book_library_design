@@ -20,7 +20,7 @@ import { useNavigate } from "react-router-dom";
 import { useDispatch } from "react-redux";
 import { actionReducer } from "../reducersPage/actions/action";
 import { ArrowForwardIcon } from "@chakra-ui/icons";
-
+import Nav from '../usedProps/Nav'
 const LogIn = () => {
   // to navigate ho home page
   const navHome = useNavigate();
@@ -66,10 +66,12 @@ const LogIn = () => {
     }
   };
   return (
-    <Box
+    <div>
+    <Nav/>
+ <Box
       border={"2px solid #bababa"}
       p={5}
-      m={10}
+      m={5}
       borderRadius="10"
       boxShadow={"md"}
     >
@@ -160,6 +162,9 @@ const LogIn = () => {
         </GridItem>
       </SimpleGrid>
     </Box>
+
+    </div>
+   
   );
 };
 
