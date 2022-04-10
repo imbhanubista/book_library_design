@@ -69,7 +69,6 @@ const LogIn = () => {
     <div>
     <Nav/>
  <Box
-      border={"2px solid #bababa"}
       p={5}
       m={5}
       borderRadius="10"

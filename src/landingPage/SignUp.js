@@ -90,7 +90,7 @@ const SignUp = () => {
    <div>
      <Nav/>
       <Center mt={2}>
-      <Box border={"2px"} borderColor={"#00758E"} borderRadius={"20px"} p= {{base : 8, md : 8}} width = {{base : 500, md : 500}}>
+      <Box border={"2px"} borderColor={"#00758E"} borderRadius={"20px"} p= {{base : 8, md : 8}} width = {{base : 500, md : 600}}>
         <Heading color={"#007373"} textAlign="center">
           Sign Up
         </Heading>{" "}
@@ -101,6 +101,7 @@ const SignUp = () => {
             type="text"
             placeholder="Enter Name"
             variant="filled"
+            textAlign={"center"}
             {...register("name", { required: true })}
             mb  = {4}
             mt  = {2}
@@ -111,6 +112,7 @@ const SignUp = () => {
             type="text"
             placeholder="Enter Email"
             variant="filled"
+            textAlign={"center"}
             {...register("email", { required: true })}
             mb  = {4}
             mt  = {2}
@@ -121,6 +123,7 @@ const SignUp = () => {
             type="text"
             placeholder="Enter Age"
             variant="filled"
+            textAlign={"center"}
             {...register("age", { required: true })}
             mb  = {4}
             mt  = {2}
@@ -144,6 +147,7 @@ const SignUp = () => {
             type="text"
             placeholder="Enter Address"
             variant="filled"
+            textAlign={"center"}
             {...register("address", { required: true })}
             mb  = {4}
             mt  = {2}
@@ -159,6 +163,7 @@ const SignUp = () => {
               type="tel"
               placeholder="phone number"
               variant="filled"
+            textAlign={"center"}
               {...register("phone", { required: true })}
             />
           </InputGroup>
@@ -172,6 +177,7 @@ const SignUp = () => {
               type={show ? "text" : "password"}
               placeholder="Enter Your Password"
               variant="filled"
+            textAlign={"center"}
               {...register("password", { required: true })}
             />
             <InputRightElement width={"4.5rem"}>
@@ -189,6 +195,7 @@ const SignUp = () => {
             accept="image/jpg, image/png,image/jpeg"
             placeholder="Upload File"
             variant="filled"
+            textAlign={"center"}
             display="none"
             onChange={handleImage}
           />
