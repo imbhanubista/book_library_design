@@ -73,7 +73,7 @@ const ResetPass = () => {
   };
   return (
     <div>
-      <Nav/>
+      <Nav />
       <Center>
         <Box
           boxShadow={"lg"}

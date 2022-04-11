@@ -19,9 +19,9 @@ import {
   MenuItem,
   MenuList,
   Divider,
-  Link
+  Link,
 } from "@chakra-ui/react";
-import {Link as RouterLink} from "react-router-dom"
+import { Link as RouterLink } from "react-router-dom";
 import {
   FiHome,
   FiTrendingUp,
@@ -39,18 +39,18 @@ import { useNavigate } from "react-router-dom";
 // import { ReactText } from 'react';
 
 const LinkItems = [
-  { name: "Home", path : "/home", icon: FiHome },
-  { name: "Create Book",  path : "/create", icon: FiTrendingUp },
-  { name: "Find Books",  path : "/allbooks", icon: FiCompass },
-  { name: "Purchased",  path : "/purchased", icon: FiStar },
-  { name: "About Us",  path : "/about", icon: FiSettings },
+  { name: "Home", path: "/home", icon: FiHome },
+  { name: "Create Book", path: "/create", icon: FiTrendingUp },
+  { name: "Find Books", path: "/allbooks", icon: FiCompass },
+  { name: "Purchased", path: "/purchased", icon: FiStar },
+  { name: "About Us", path: "/about", icon: FiSettings },
 ];
 
 export default function SidebarWithHeader({ children }) {
   const { isOpen, onOpen, onClose } = useDisclosure();
-//   const selector = useSelector(state=> state.reducer)
+  //   const selector = useSelector(state=> state.reducer)
 
-// console.log(selector.data.data.name);
+  // console.log(selector.data.data.name);
   return (
     <Box minH="100vh" bg={useColorModeValue("gray.100", "gray.900")}>
       <SidebarContent
@@ -113,10 +113,10 @@ const SidebarContent = ({ onClose, ...rest }) => {
       </Flex>
       <Divider />
       {LinkItems.map((link) => (
-        <RouterLink to = {link.path} >
-        <NavItem key={link.name} icon={link.icon}>
-             {link.name}
-        </NavItem>
+        <RouterLink to={link.path}>
+          <NavItem key={link.name} icon={link.icon}>
+            {link.name}
+          </NavItem>
         </RouterLink>
       ))}
     </Box>
@@ -160,17 +160,17 @@ const NavItem = ({ icon, children, ...rest }) => {
 };
 
 const MobileNav = ({ onOpen, ...rest }) => {
-  const logNav = useNavigate()
-  const dispatch = useDispatch()
-  const selector = useSelector(state=>state.reducer)
-  const isAdmin = selector.data.data.isAdmin
+  const logNav = useNavigate();
+  const dispatch = useDispatch();
+  const selector = useSelector((state) => state.reducer);
+  const isAdmin = selector.data.data.isAdmin;
   // console.log(isAdmin)
 
   // function for logOUt
-  const logOut = ()=>{
-    dispatch(actionReducer({}))
-    logNav('/login')
-  }
+  const logOut = () => {
+    dispatch(actionReducer({}));
+    logNav("/login");
+  };
   return (
     <Flex
       ml={{ base: 0, md: 60 }}
@@ -229,7 +229,7 @@ const MobileNav = ({ onOpen, ...rest }) => {
                 >
                   <Text fontSize="sm">{selector.data.data.name}</Text>
                   <Text fontSize="xs" color="gray.600">
-                  {isAdmin?"Admin":"User"}
+                    {isAdmin ? "Admin" : "User"}
                   </Text>
                 </VStack>
                 <Box display={{ base: "none", md: "flex" }}>
@@ -243,7 +243,10 @@ const MobileNav = ({ onOpen, ...rest }) => {
             >
               <MenuItem>Profile</MenuItem>
               {/* <MenuItem>Settings</MenuItem> */}
-              <MenuItem> <RouterLink to= "/purchased"> Purchase </RouterLink>  </MenuItem>
+              <MenuItem>
+                {" "}
+                <RouterLink to="/purchased"> Purchase </RouterLink>{" "}
+              </MenuItem>
               <MenuDivider />
               <MenuItem onClick={logOut}>Sign out</MenuItem>
             </MenuList>
